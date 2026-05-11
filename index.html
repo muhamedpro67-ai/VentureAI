@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VentureAI | Elite Business Planning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #9D9A51;
+            --white: #FFFFFF;
+            --dark: #1a1a1a;
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--dark);
+            overflow: hidden; /* Keeps the page sleek */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation/Info Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: var(--white);
+            border-bottom: 2px solid #f0f0f0;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            height: 60px; /* Adjust based on your logo shape */
+            width: auto;
+        }
+
+        .brand-text h1 {
+            margin: 0;
+            font-size: 22px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        .description {
+            max-width: 450px;
+            text-align: right;
+        }
+
+        .description p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        .description strong {
+            color: var(--gold);
+        }
+
+        /* Chat Container - Forced to Center */
+        .chat-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff 0%, #fcfcfc 100%);
+            padding: 20px;
+        }
+
+        /* Styling the Zapier Element specifically */
+        .zapier-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 85vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border: 1px solid rgba(157, 154, 81, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* This forces the Zapier Chatbot to NOT be a tiny bubble */
+        zapier-interfaces-chatbot-embed {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Decorative Background Elements */
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--gold);
+            filter: blur(150px);
+            opacity: 0.1;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        .top-left { top: -100px; left: -100px; }
+        .bottom-right { bottom: -100px; right: -100px; }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; flex-direction: column; text-align: center; }
+            .description { text-align: center; margin-top: 10px; }
+            .chat-wrapper { padding: 10px; }
+            .zapier-container { height: 75vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-accent top-left"></div>
+    <div class="bg-accent bottom-right"></div>
+
+    <header>
+        <div class="brand">
+            <img src="logo.png" alt="VentureAI Logo">
+            <div class="brand-text">
+                <h1>VENTUREAI</h1>
+            </div >
+        </div>
+        <div class="description">
+            <p>Welcome to <strong>VentureAI</strong>. Your professional partner for high-level <strong>Business Planning</strong>, market strategy, and financial modeling. Start chatting below to build your empire.</p>
+        </div>
+    </header>
+
+    <main class="chat-wrapper">
+        <div class="zapier-container">
+            <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='false' chatbot-id='cmp1c3zdi00187sp2ribv983g'></zapier-interfaces-chatbot-embed>
+
+            </div>
+    </main>
+
+</body>
+</html>
